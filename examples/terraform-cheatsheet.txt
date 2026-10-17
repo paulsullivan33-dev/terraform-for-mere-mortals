@@ -1,0 +1,38 @@
+terraform cheat sheet — the commands this guide uses
+====================================================
+
+Set up a working directory
+  terraform init                      download providers and modules, create the lock file
+  terraform init -upgrade             re-resolve provider versions within your constraints
+  terraform fmt                       rewrite .tf files in the canonical style
+  terraform fmt -diff                 show what fmt would change (it still writes)
+  terraform fmt -check                exit non-zero if anything is unformatted
+  terraform validate                  check the configuration for errors, no API calls
+
+The core loop
+  terraform plan                      show what would change, change nothing
+  terraform plan -out=demo.tfplan     save the exact plan to a file
+  terraform show demo.tfplan          read a saved plan back
+  terraform apply                     make the planned changes (asks first)
+  terraform apply demo.tfplan         apply a saved plan exactly (no prompt)
+  terraform apply -var copies=3       set one variable for this run
+  terraform destroy                   delete everything the state tracks
+
+Look at what you have
+  terraform output                    all outputs (sensitive ones stay redacted)
+  terraform output server_name        one output
+  terraform output -raw admin_token   the raw value of a sensitive output — prints the secret
+  terraform state list                every resource Terraform is tracking
+  terraform state show 'local_file.pages["index"]'
+                                      current recorded attributes of one instance
+  terraform providers                 which providers the configuration requires
+
+Experiment safely
+  terraform console                   evaluate expressions interactively (exit to quit)
+  terraform plan -var environment=qa watch a validation rule reject a bad value
+
+Handle with care (see the Working Safely chapter)
+  terraform plan -refresh-only        report drift without proposing fixes (documented)
+  terraform apply -target=...         touch one resource only — a scalpel, not a hammer (documented)
+  terraform import ...                adopt something that already exists (documented)
+  terraform state mv / state rm       surgery on state; last resort, backed up first

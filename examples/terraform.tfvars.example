@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and edit the values.
+# terraform.tfvars is where your own values live; it is
+# conventionally kept out of version control.
+environment = "dev"
+message     = "Deployed by hand the first time."
+copies      = 2
+page_names  = ["index", "about"]

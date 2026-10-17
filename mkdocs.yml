@@ -1,0 +1,24 @@
+site_name: Terraform for Mere Mortals
+site_description: Plain-language Terraform. Infrastructure as code explained from the first plan to a safe destroy, with the whole lifecycle run for real using providers that live entirely on your own machine.
+site_url: https://paulsullivan33-dev.github.io/terraform-for-mere-mortals/
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Terraform Is: what-terraform-is.md
+  - Your First Configuration: your-first-configuration.md
+  - Providers and Resources: providers-and-resources.md
+  - Plan and Apply: plan-and-apply.md
+  - State: state.md
+  - Variables and Outputs: variables-and-outputs.md
+  - Expressions and Repetition: expressions-and-repetition.md
+  - Modules: modules.md
+  - A Worked Example: worked-example.md
+  - Working Safely: working-safely.md
+  - Where Terraform Fits: where-terraform-fits.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md
