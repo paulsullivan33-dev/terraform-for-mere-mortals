@@ -83,3 +83,19 @@ hand-edited file that Terraform then treated as
 drift. Every output block presented as a run is
 quoted from those runs. The criterion-by-criterion
 account is in [Writing Criteria](criteria.md).
+
+---
+
+## Part of the series
+
+This guide is one of the [For Mere Mortals](https://paulsullivan33-dev.github.io/mere-mortals/) guides: plain-language guides to the tools programmers and makers use.
+
+Related guides:
+
+- [Ansible for Mere Mortals](https://paulsullivan33-dev.github.io/ansible-for-mere-mortals/)
+- [Azure for Mere Mortals](https://paulsullivan33-dev.github.io/azure-for-mere-mortals/)
+- [Kubernetes for Mere Mortals](https://paulsullivan33-dev.github.io/kubernetes-for-mere-mortals/)
+
+## License
+
+The writing in this guide is licensed under [CC BY 4.0](https://github.com/paulsullivan33-dev/terraform-for-mere-mortals/blob/main/LICENSE). Code examples and lab scripts are licensed under the [MIT License](https://github.com/paulsullivan33-dev/terraform-for-mere-mortals/blob/main/LICENSE-CODE).
